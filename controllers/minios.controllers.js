@@ -40,6 +40,8 @@ const updateMinion = async (req, res, next) => {
 		const db = getDB();
 		const { id } = req.params;
 
+		console.log(id, req.body);
+
 		if (!ObjectId.isValid(id)) {
 			return res
 				.status(400)
@@ -47,7 +49,7 @@ const updateMinion = async (req, res, next) => {
 		}
 
 		const minion = await db
-			.collection("minions")
+			.collection("minios")
 			.updateOne({ _id: ObjectId(id) }, { $set: req.body });
 
 		if (!minion.modifiedCount) {
@@ -77,7 +79,7 @@ const deleteMinion = async (req, res, next) => {
 		}
 
 		const minion = await db
-			.collection("minions")
+			.collection("minios")
 			.deleteOne({ _id: ObjectId(id) });
 
 		if (!minion.deletedCount) {
