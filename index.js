@@ -21,7 +21,7 @@ connectToServer(err => {
 });
 
 // MINIONS ROUTES
-app.use("/", minionsRoute);
+app.use(minionsRoute);
 
 // NOT FOUND ROUTE
 app.all("*", (req, res) => {

@@ -5,7 +5,7 @@ const {
 	saveMinions,
 	updateMinion,
 	deleteMinion,
-} = require("../controllers/minios.controllers");
+} = require("../controllers/minions.controllers");
 
 // GET AND POST ROUTE
 router.route("/").get(getMinions).post(saveMinions);
