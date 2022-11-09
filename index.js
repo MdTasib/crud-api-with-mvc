@@ -1,7 +1,9 @@
 const express = require("express");
 const cors = require("cors");
-const { connectToServer } = require("./utils/dbConnected");
 require("dotenv").config();
+const { connectToServer } = require("./utils/dbConnected");
+const errorHandler = require("./middlewares/errorHandler");
+const minionsRoute = require("./routes/minions.route");
 const app = express();
 
 // MIDDLEWARES
@@ -18,9 +20,8 @@ connectToServer(err => {
 	}
 });
 
-app.get("/", (req, res) => {
-	res.send("Server is running");
-});
+// MINIONS ROUTES
+app.use(minionsRoute);
 
 // NOT FOUND ROUTE
 app.all("*", (req, res) => {
