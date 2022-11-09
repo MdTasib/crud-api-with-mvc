@@ -1,0 +1,23 @@
+{
+	"success": true,
+	"data": [
+		{
+			"_id": "636baeaa6b688576d537ad91",
+			"name": "red minion",
+			"age": 22,
+			"color": "red"
+		},
+		{
+			"_id": "636baec16b688576d537ad92",
+			"name": "green minion",
+			"age": 24,
+			"color": "green"
+		},
+		{
+			"_id": "636baf2c426fa1a1bb2d28fd",
+			"name": "blue minion",
+			"age": 12,
+			"color": "blue"
+		}
+	]
+}
